@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hisoCreatingGame</title>
+<meta name="description" content="ブラウザで遊べる自作ゲーム集">
+<style>
+  :root {
+    --bg: #14161c;
+    --card: #1e222b;
+    --border: #2d3340;
+    --text: #e8eaf0;
+    --muted: #9aa3b5;
+    --accent: #ffb347;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f4f5f8; --card: #fff; --border: #dde1ea; --text: #1c2030; --muted: #5d667a; --accent: #d9780f; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: system-ui, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif; line-height: 1.6;
+  }
+  header, main, footer { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+  header { padding-top: 48px; padding-bottom: 8px; }
+  h1 { margin: 0; font-size: 2rem; }
+  header p { margin: 4px 0 0; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 24px auto; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .card h2 { margin: 0; font-size: 1.2rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag { font-size: .75rem; border: 1px solid var(--border); border-radius: 999px; padding: 1px 10px; color: var(--muted); }
+  .tag.wip { color: var(--accent); border-color: var(--accent); }
+  .btn {
+    margin-top: auto; align-self: flex-start; text-decoration: none; font-weight: 700;
+    background: var(--accent); color: #1a1205; padding: 8px 20px; border-radius: 8px;
+  }
+  .btn:hover { filter: brightness(1.1); }
+  footer { padding-bottom: 48px; color: var(--muted); font-size: .8rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>hisoCreatingGame</h1>
+  <p>ブラウザでそのまま遊べる自作ゲーム</p>
+</header>
+<main>
+  <div class="grid">
+    <section class="card">
+      <h2>REWOP</h2>
+      <div class="tags"><span class="tag">アクション</span><span class="tag">PC推奨</span></div>
+      <p>W/E/O/P キーで両脚を操り 100m を目指す、QWOP 風の物理アクション。</p>
+      <a class="btn" href="power-qwop/">遊ぶ</a>
+    </section>
+  </div>
+</main>
+<footer>Made with Unity / JavaScript</footer>
+</body>
+</html>
